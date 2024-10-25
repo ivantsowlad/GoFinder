@@ -12,6 +12,9 @@ ALLOWED_HOSTS = ['gofinder.onrender.com', '*', '0.0.0.0']
 
 PORT = 8000
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://appname.herokuapp.com'
+]
 
 # Application definition
 INSTALLED_APPS = [
