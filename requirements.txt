@@ -2,3 +2,4 @@ beautifulsoup4==4.12.3
 Django==5.1.2
 pandas==2.2.3
 Requests==2.32.3
+whitenoise==6.7.0
