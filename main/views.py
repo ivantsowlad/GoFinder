@@ -74,7 +74,7 @@ def project(request):
 
 def download_file(request):
     for i in range(0, 1):
-        f = open('../GoFinder/google.csv', 'r').read()
+        f = open('./google.csv', 'r').read()
         response = HttpResponse(f)
         response['Content-Disposition'] = 'attachment;filename=google.csv'
         return response
