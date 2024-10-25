@@ -8,7 +8,9 @@ SECRET_KEY = 'django-insecure-$s2qol*ol)c*dzh6nn6j15mu89^dm&61q55e53_f27d@6g7=tu
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['gofinder.onrender.com', '*']
+ALLOWED_HOSTS = ['gofinder.onrender.com', '*', '0.0.0.0']
+
+PORT = 8000
 
 
 # Application definition
