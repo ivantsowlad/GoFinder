@@ -6,7 +6,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-$s2qol*ol)c*dzh6nn6j15mu89^dm&61q55e53_f27d@6g7=tu'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['gofinder.onrender.com', '*', '0.0.0.0']
 
