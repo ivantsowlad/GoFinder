@@ -4,7 +4,7 @@
 
 {% block content %}
     <div class="features">
-        <h1>{{ title }}</h1>
+        <h1>Pro vyhledání napíšte do pole a klikněte tlačítko</h1>
         <form method="post" class="form">
             {% csrf_token %}
             {{ form.search }}<br>
