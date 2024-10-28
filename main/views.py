@@ -11,7 +11,7 @@ HEADERS = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/
 
 
 def index(request):
-    return render(request, 'main/index.html', {'title': 'Vítám Vás na mé stránce s projektem.'})
+    return render(request, 'main/index.html', {'title': 'Domovská'})
 
 
 def project(request):
@@ -56,7 +56,7 @@ def project(request):
             for ind, row in df.iterrows():
                 found_list.append(list((row['Link'], row['Title'], row['Description'])))
             data = {
-                'title': 'Výsledky hledání',
+                'title': 'Hledání',
                 'data': found_list
             }
             return render(request, 'main/search.html', data)
@@ -64,7 +64,7 @@ def project(request):
             error = 'Form was not correct.'
     form = SearchForm()
     data = {
-        'title': 'Pro vyhledání napíšte do pole a klikněte tlačítko',
+        'title': 'Projekt',
         'to_search': found_list,
         'form': form,
         'error': error
