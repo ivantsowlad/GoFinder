@@ -6,7 +6,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-$s2qol*ol)c*dzh6nn6j15mu89^dm&61q55e53_f27d@6g7=tu'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['gofinder.onrender.com', '*', '0.0.0.0']
 
@@ -104,14 +104,6 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
-
-# STATIC_URL = 'static/'
-#
-# # STATICFILES_DIRS = [
-# #     BASE_DIR / "main/static",
-# # ]
-#
-# STATIC_ROOT = BASE_DIR / 'main/static'
 
 STATIC_URL = 'main/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'main/static')]
