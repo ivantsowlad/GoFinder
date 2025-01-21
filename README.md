@@ -1,7 +1,3 @@
-GoFinder is a Python-based project designed to simplify the process of searching and organizing data. 
-This application leverages a combination of backend and frontend technologies, including Python, CSS, and HTML, 
-to deliver a user-friendly interface for data retrieval and presentation.
-
 Key Features:
 	•	Data Management: Enables efficient storage and retrieval of information using an SQLite database.
 	•	Customizable Searches: Support for tailored search queries based on user preferences.
