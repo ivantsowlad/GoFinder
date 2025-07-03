@@ -28,7 +28,7 @@ to deliver a user-friendly interface for data retrieval and presentation.
 
 3. Run the application:
     ```bash
-    python main/views.py
+    python manage.py runserver
     ```
 
 4. Open the provided local URL in your web browser.
