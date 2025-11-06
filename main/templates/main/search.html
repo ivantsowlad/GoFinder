@@ -5,16 +5,34 @@
 {% block content %}
     <div class="results">
         <h1>Výsledky hledání</h1>
-        {% for i in data %}
-            <hr width="100%" size="2">
-            <p>Link:</p>
-            <a href="{{ i.0 }}">{{ i.0 }}</a>
-            <p>Title:</p>
-            <p>{{ i.1 }}</p>
-            <p>Description:</p>
-            <p>{{ i.2 }}</p>
-            <hr width="100%" size="2" color="blue" noshade>
-        {% endfor %}
-        <a href="{% url 'download' %}"><button class="btn btn-success" type="submit">Stáhnout</button></a>
+        {% if search_term %}
+            <p><strong>Hledáno:</strong> {{ search_term }}</p>
+            <p><strong>Počet výsledků:</strong> {{ results_count }}</p>
+        {% endif %}
+        
+        {% if data %}
+            {% for i in data %}
+                <hr width="100%" size="2">
+                <p><strong>Link:</strong></p>
+                <a href="{{ i.0 }}" target="_blank">{{ i.0 }}</a>
+                <p><strong>Title:</strong></p>
+                <p>{{ i.1 }}</p>
+                <p><strong>Description:</strong></p>
+                <p>{{ i.2 }}</p>
+                <hr width="100%" size="2" color="blue" noshade>
+            {% endfor %}
+            <a href="{% url 'download' %}"><button class="btn btn-success" type="submit">Stáhnout</button></a>
+        {% else %}
+            <div class="alert alert-warning" style="margin: 20px 0; padding: 15px; background-color: #fff3cd; border: 1px solid #ffc107; border-radius: 5px;">
+                <p><strong>Žádné výsledky nenalezeny.</strong></p>
+                <p>Možné důvody:</p>
+                <ul>
+                    <li>Google změnil strukturu HTML - scraper potřebuje aktualizaci</li>
+                    <li>Google blokuje automatizované dotazy</li>
+                    <li>Zkuste použít jiný vyhledávací dotaz</li>
+                </ul>
+                <a href="{% url 'project' %}"><button class="btn btn-primary">Zpět na vyhledávání</button></a>
+            </div>
+        {% endif %}
     </div>
 {% endblock %}
